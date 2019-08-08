@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SlidingNumberView_Example' do
+  pod 'SlidingNumberView', :path => '../'
+
+  target 'SlidingNumberView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
