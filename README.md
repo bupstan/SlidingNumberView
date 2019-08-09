@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/SlidingNumberView.svg?style=flat)](https://cocoapods.org/pods/SlidingNumberView)
 
 ## How it looks
-![](name-of-giphy.gif)
+![](Samples/SlidingNumberView-SampleGif.gif)
 
 ## Example Project
 
