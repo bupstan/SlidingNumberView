@@ -7,17 +7,40 @@
 //
 
 import UIKit
+import SlidingNumberView
 
 class ViewController: UIViewController {
+    
+    @IBAction func clickOnStartCounting(_ sender: Any) {
+        if let _ = numberView {
+            numberView.removeFromSuperview()
+        }
+        createSlidingNumberView()
+    }
+    
+    var numberView: SlidingNumberView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    func createSlidingNumberView() {
+        numberView = SlidingNumberView(startNumber: "0011", endNumber: "1205")
+        numberView.animationDuration = 3
+        
+        self.view.addSubview(numberView)
+        numberView.translatesAutoresizingMaskIntoConstraints = false
+        numberView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0).isActive = true
+        numberView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0).isActive = true
+        self.view.layoutIfNeeded()
+        
+        numberView.startCounting(completion: {finish in
+            
+        })
     }
 
 }

@@ -11,7 +11,6 @@
 		2AEE90E662410D4AC6944F8EFAD6A6AD /* SlidingNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB374731C1A6898B6F20F68D54CB27C5 /* SlidingNumberView.swift */; };
 		6B5DA69D0BFD8C75BEEF0371B3CA8985 /* SlidingNumberStrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E0B2381FD3EDB79D4DB09AF614FDB2 /* SlidingNumberStrips.swift */; };
 		6B6B97E4A9D8BC3359FC34514F8F1D2D /* SlidingNumberView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B24D781DE4BF7DB874AC173E67C73724 /* SlidingNumberView-dummy.m */; };
-		828F56569EC07A8219C365BE50D940A4 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BE4476841D90AE1A78CA1EE74A3C6B /* ReplaceMe.swift */; };
 		91BF9510B26F9E0DDD14DA409C4F203D /* SlidingNumberView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F0B4BE2B561CFDE90AAA444305E8CAA /* SlidingNumberView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC80572675309C1A155ABCF3966DC823 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		ADB95F07791C60EFE93A2B69BD092A1F /* Pods-SlidingNumberView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9940F65E1CD53F889DEBEF5B25A13801 /* Pods-SlidingNumberView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,9 +39,9 @@
 
 /* Begin PBXFileReference section */
 		02CF3FDCF37826638B0393723FBD5C4B /* Pods-SlidingNumberView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SlidingNumberView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		093CC9B2E63C03103F52F553CAEE8567 /* SlidingNumberView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SlidingNumberView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		093CC9B2E63C03103F52F553CAEE8567 /* SlidingNumberView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SlidingNumberView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		144D8113F1C42865C96A1351B678459C /* Pods-SlidingNumberView_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SlidingNumberView_Tests-Info.plist"; sourceTree = "<group>"; };
-		16B076F35E912618C8E96AEEF4D32B6F /* Pods_SlidingNumberView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SlidingNumberView_Tests.framework; path = "Pods-SlidingNumberView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16B076F35E912618C8E96AEEF4D32B6F /* Pods_SlidingNumberView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlidingNumberView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F3359DF28F8CD63A8B3270C0917A538 /* Pods-SlidingNumberView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlidingNumberView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3935F2C4A26496F4C1FFF07C7E3B5D1F /* Pods-SlidingNumberView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlidingNumberView_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -52,24 +51,23 @@
 		4F0B4BE2B561CFDE90AAA444305E8CAA /* SlidingNumberView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlidingNumberView-umbrella.h"; sourceTree = "<group>"; };
 		56C020197FD136B45AC53C48D819E842 /* Pods-SlidingNumberView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlidingNumberView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		656FC9BEBE26566ABA87669E29552DB6 /* Pods-SlidingNumberView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SlidingNumberView_Example-dummy.m"; sourceTree = "<group>"; };
-		68F006FD941203355C53C1AD262A317F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		68F006FD941203355C53C1AD262A317F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6B01B35763B2ABB93ED6742CDA386E3C /* SlidingNumberView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SlidingNumberView-Info.plist"; sourceTree = "<group>"; };
 		6C6746DAC84785174F843AF04E59BC94 /* SlidingNumberView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SlidingNumberView.xcconfig; sourceTree = "<group>"; };
 		7031CBF7F10E6A914E5670EBC2E7B8A1 /* Pods-SlidingNumberView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SlidingNumberView_Example-frameworks.sh"; sourceTree = "<group>"; };
-		77BE4476841D90AE1A78CA1EE74A3C6B /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SlidingNumberView/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		95CF6EC67B6ECA41E44B500482D42B3E /* Pods-SlidingNumberView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SlidingNumberView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9870337F6B713704DB9CA466CAE9AF15 /* Pods-SlidingNumberView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SlidingNumberView_Tests-dummy.m"; sourceTree = "<group>"; };
 		9940F65E1CD53F889DEBEF5B25A13801 /* Pods-SlidingNumberView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SlidingNumberView_Tests-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1E0B2381FD3EDB79D4DB09AF614FDB2 /* SlidingNumberStrips.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlidingNumberStrips.swift; path = SlidingNumberView/Classes/SlidingNumberStrips.swift; sourceTree = "<group>"; };
 		A9A892F4BE81734D7814C7FBBAE8FB41 /* Pods-SlidingNumberView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SlidingNumberView_Example-Info.plist"; sourceTree = "<group>"; };
 		B24D781DE4BF7DB874AC173E67C73724 /* SlidingNumberView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SlidingNumberView-dummy.m"; sourceTree = "<group>"; };
 		C799A71716E60003E7C2EB469CDD5C32 /* Pods-SlidingNumberView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SlidingNumberView_Example-umbrella.h"; sourceTree = "<group>"; };
-		CA58DBC3A90B093E0A6FDC0B2E474441 /* Pods_SlidingNumberView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SlidingNumberView_Example.framework; path = "Pods-SlidingNumberView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA58DBC3A90B093E0A6FDC0B2E474441 /* Pods_SlidingNumberView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlidingNumberView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D610F13F84F81BED7620BA7E14E38248 /* Pods-SlidingNumberView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SlidingNumberView_Tests.modulemap"; sourceTree = "<group>"; };
-		D637B8EE3DF158936EC71E0D9A5D4C8D /* SlidingNumberView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SlidingNumberView.framework; path = SlidingNumberView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D637B8EE3DF158936EC71E0D9A5D4C8D /* SlidingNumberView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SlidingNumberView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC50C5536DBD476A9A043DAC551EE1EA /* SlidingNumberView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlidingNumberView-prefix.pch"; sourceTree = "<group>"; };
-		E24D76CFED0F98F2598857DAD52D6E46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E24D76CFED0F98F2598857DAD52D6E46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F8BF46D72FE4DC4279889DA2202152FB /* Pods-SlidingNumberView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SlidingNumberView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		FB374731C1A6898B6F20F68D54CB27C5 /* SlidingNumberView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlidingNumberView.swift; path = SlidingNumberView/Classes/SlidingNumberView.swift; sourceTree = "<group>"; };
 		FCBF435919F094A585E45743AF3BAB03 /* Pods-SlidingNumberView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlidingNumberView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -217,9 +215,8 @@
 		D6C9CD8BFD48A670D6AEEE2D39757D62 /* SlidingNumberView */ = {
 			isa = PBXGroup;
 			children = (
-				77BE4476841D90AE1A78CA1EE74A3C6B /* ReplaceMe.swift */,
-				A1E0B2381FD3EDB79D4DB09AF614FDB2 /* SlidingNumberStrips.swift */,
 				FB374731C1A6898B6F20F68D54CB27C5 /* SlidingNumberView.swift */,
+				A1E0B2381FD3EDB79D4DB09AF614FDB2 /* SlidingNumberStrips.swift */,
 				7810A567254CEF1D96D35B878E26C26F /* Pod */,
 				81D49071256E1313297CC2BE326DEB2D /* Support Files */,
 			);
@@ -386,7 +383,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				828F56569EC07A8219C365BE50D940A4 /* ReplaceMe.swift in Sources */,
 				6B5DA69D0BFD8C75BEEF0371B3CA8985 /* SlidingNumberStrips.swift in Sources */,
 				6B6B97E4A9D8BC3359FC34514F8F1D2D /* SlidingNumberView-dummy.m in Sources */,
 				2AEE90E662410D4AC6944F8EFAD6A6AD /* SlidingNumberView.swift in Sources */,
@@ -737,8 +733,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

@@ -15,7 +15,7 @@ public class SlidingNumberView: UIView {
     
     var counterFont: UIFont!
     private var labelStrips: [SlidingNumberStrips]!
-    var animationDuration: Double = 2.0
+    public var animationDuration: Double = 2.0
     
     /// These values are used to simulate realistic scrolling effect on numbers
     private var displacementValues = [[0],
