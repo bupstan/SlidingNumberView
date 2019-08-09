@@ -1,0 +1,16 @@
+PODS:
+  - SlidingNumberView (0.0.1)
+
+DEPENDENCIES:
+  - SlidingNumberView (from `../`)
+
+EXTERNAL SOURCES:
+  SlidingNumberView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SlidingNumberView: 7e4f5d750c80317d825621343d3c1c90f0f569e9
+
+PODFILE CHECKSUM: d2596f909db0a372bbcffe59d0c6ad248f78bc42
+
+COCOAPODS: 1.7.2

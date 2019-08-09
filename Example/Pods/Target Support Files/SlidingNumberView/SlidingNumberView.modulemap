@@ -1,0 +1,6 @@
+framework module SlidingNumberView {
+  umbrella header "SlidingNumberView-umbrella.h"
+
+  export *
+  module * { export * }
+}
