@@ -2,12 +2,7 @@
 
 [![CI Status](https://img.shields.io/travis/bupstan/SlidingNumberView.svg?style=flat)](https://travis-ci.org/bupstan/SlidingNumberView)
 [![Version](https://img.shields.io/cocoapods/v/SlidingNumberView.svg?style=flat)](https://cocoapods.org/pods/SlidingNumberView)
-
 [![License](https://img.shields.io/cocoapods/l/SlidingNumberView.svg?style=flat)](https://cocoapods.org/pods/SlidingNumberView)
-
-<a href="https://github.com/bupstan/SlidingNumberView/blob/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/SlidingNumberView.svg?style=flat"></a>
-
-
 [![Platform](https://img.shields.io/cocoapods/p/SlidingNumberView.svg?style=flat)](https://cocoapods.org/pods/SlidingNumberView)
 
 ## How it looks
