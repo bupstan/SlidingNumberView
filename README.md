@@ -31,11 +31,37 @@ pod 'SlidingNumberView'
 import SlidingNumberView
 ```
 
-- Initialize a SlidingNumberView object with a starting number and a final number as **String** parameters. (Numbers, as of now, are only supported up to 11 Digits)
+- Initialize a SlidingNumberView object with a starting number and a final number as **String** parameters (Numbers, as of now, are only supported up to 11 Digits). You can also specify a custom font. However, custom fonts can cause undesirable clipping.
 
 ```
 var numberView = SlidingNumberView(startNumber: "1234", endNumber: "5678")
+
+\\ or 
+
+var numberView = SlidingNumberView(startNumber: "1234", endNumber: "5678", font: UIFont.systemFont(ofSize: 26))
 ```
+
+- (Optional) You can specify the total animation duration
+
+```
+numberView.animationDuration = 3
+```
+
+- Add to the container view so constraints can be added
+
+```
+self.view.addSubview(numberView)
+numberView.translatesAutoresizingMaskIntoConstraints = false
+```
+
+- **SlidingNumberView** has its own weight and height constraint calculated from your font size. So you only need to give its **x** and **y** position constraints.
+
+```
+numberView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0).isActive = true
+
+numberView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0).isActive = true
+```
+
 - Call the object's `startCounting` method to start animation.
 
 ```
@@ -43,6 +69,25 @@ numberView.startCounting(completion: {finish in
 	print("Counting Done")
 })
 ```
+
+### Full Code Block
+
+```
+numberView = SlidingNumberView(startNumber: "0100", endNumber: "1250", font: UIFont.systemFont(ofSize: 26))
+numberView.animationDuration = 3
+        
+self.view.addSubview(numberView)
+numberView.translatesAutoresizingMaskIntoConstraints = false
+
+numberView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0).isActive = true
+numberView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0).isActive = true
+self.view.layoutIfNeeded()
+        
+numberView.startCounting(completion: {finish in
+            
+        })
+```
+
 
 ## Known Limitations
 - SlidingNumberView is in alpha state.
