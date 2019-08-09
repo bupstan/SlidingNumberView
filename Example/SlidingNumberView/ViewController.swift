@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     func createSlidingNumberView() {
-        numberView = SlidingNumberView(startNumber: "0011", endNumber: "1205")
+        numberView = SlidingNumberView(startNumber: "9991", endNumber: "1123")
         numberView.animationDuration = 3
         
         self.view.addSubview(numberView)
