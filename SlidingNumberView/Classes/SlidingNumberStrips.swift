@@ -14,6 +14,7 @@ public class SlidingNumberStrips: UIStackView {
     var displacementValue: Int!
     private var previousNumber: Int!
     var targetNumber: Int!
+    var labelHeight: CGFloat!
     
     var currentNumber: Int! {
         didSet {

@@ -11,14 +11,28 @@ import SlidingNumberView
 
 class ViewController: UIViewController {
     
+    var numberView: SlidingNumberView!
+
     @IBAction func clickOnStartCounting(_ sender: Any) {
         if let _ = numberView {
             numberView.removeFromSuperview()
         }
-        createSlidingNumberView()
+        numberView = SlidingNumberView(startNumber: "0100", endNumber: "1250")
+        view.addSubview(self.numberView)
+        
+        numberView.translatesAutoresizingMaskIntoConstraints = false
+        numberView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: -100).isActive = true
+        numberView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0).isActive = true
+        view.layoutIfNeeded()
+        
+        numberView.startCounting(completion: {finish in
+            self.numberView.endNumber = "0000"
+            self.numberView.startCounting(completion: {finish in
+                print("Counting Finally Done")
+            })
+        })
     }
     
-    var numberView: SlidingNumberView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,21 +41,5 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    func createSlidingNumberView() {
-        numberView = SlidingNumberView(startNumber: "0100", endNumber: "1250")
-        numberView.animationDuration = 3
-        
-        self.view.addSubview(numberView)
-        numberView.translatesAutoresizingMaskIntoConstraints = false
-        numberView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0).isActive = true
-        numberView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0).isActive = true
-        self.view.layoutIfNeeded()
-        
-        numberView.startCounting(completion: {finish in
-            
-        })
-    }
-
 }
 

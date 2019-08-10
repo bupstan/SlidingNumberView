@@ -71,6 +71,17 @@ numberView.startCounting(completion: {finish in
 })
 ```
 
+- The `startCounting` method has a completion handler so you can change to another `endNumber` through its properties and start the counting again. (It is crucial to note that the `startNumber` and `endNumber` are meant to accept strings of the same digit size).
+
+```swift
+numberView.startCounting(completion: {finish in
+	self.numberView.endNumber = "0000"
+	self.numberView.startCounting(completion: { finish in 
+		print("Counting Finally done")
+	})
+})
+```
+
 ### Full Code Block
 
 ```swift
@@ -85,8 +96,11 @@ numberView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 
 self.view.layoutIfNeeded()
         
 numberView.startCounting(completion: {finish in
-            
-        })
+	self.numberView.endNumber = "0000"
+	self.numberView.startCounting(completion: { finish in 
+		print("Counting Finally done")
+	})
+})
 ```
 
 

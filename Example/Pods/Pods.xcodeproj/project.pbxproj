@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0D2F4F63BFF247FB3F2B0F36624D7283 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		2AEE90E662410D4AC6944F8EFAD6A6AD /* SlidingNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB374731C1A6898B6F20F68D54CB27C5 /* SlidingNumberView.swift */; };
-		6B5DA69D0BFD8C75BEEF0371B3CA8985 /* SlidingNumberStrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E0B2381FD3EDB79D4DB09AF614FDB2 /* SlidingNumberStrips.swift */; };
-		6B6B97E4A9D8BC3359FC34514F8F1D2D /* SlidingNumberView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B24D781DE4BF7DB874AC173E67C73724 /* SlidingNumberView-dummy.m */; };
-		91BF9510B26F9E0DDD14DA409C4F203D /* SlidingNumberView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F0B4BE2B561CFDE90AAA444305E8CAA /* SlidingNumberView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39B9FF3228B1328468B5639F44D07E7F /* SlidingNumberView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C71170F6AE7D2604F89D20EDD0FF93E /* SlidingNumberView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69A993B5C5002D92DE3C1CB0B2C4E6F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		91DEAC1A57A8E7EE3902117059993DFF /* SlidingNumberStrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79E667D3FE9E6D361BE154570BA6A32 /* SlidingNumberStrips.swift */; };
 		AC80572675309C1A155ABCF3966DC823 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		ADB95F07791C60EFE93A2B69BD092A1F /* Pods-SlidingNumberView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9940F65E1CD53F889DEBEF5B25A13801 /* Pods-SlidingNumberView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B49395C3543A3C3BD2EF79BDE4706E9C /* Pods-SlidingNumberView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C799A71716E60003E7C2EB469CDD5C32 /* Pods-SlidingNumberView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC1F41DE820B42ED2794D0CE98FEE938 /* Pods-SlidingNumberView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 656FC9BEBE26566ABA87669E29552DB6 /* Pods-SlidingNumberView_Example-dummy.m */; };
 		D0228F33A23C6813A80F1D33D063763C /* Pods-SlidingNumberView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9870337F6B713704DB9CA466CAE9AF15 /* Pods-SlidingNumberView_Tests-dummy.m */; };
-		D6D3FBD0DB0196FEAE3C3D2EC08091CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		E6C733C5D84E49511F370276BAC972BD /* SlidingNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA41E6EF606761FAFD0C43C93C2542 /* SlidingNumberView.swift */; };
+		F48ECBDAED9744A3185F24A8CDA363DF /* SlidingNumberView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2F758B990DE2B748258E17F51C9B28 /* SlidingNumberView-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,37 +39,37 @@
 
 /* Begin PBXFileReference section */
 		02CF3FDCF37826638B0393723FBD5C4B /* Pods-SlidingNumberView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SlidingNumberView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		093CC9B2E63C03103F52F553CAEE8567 /* SlidingNumberView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SlidingNumberView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		144D8113F1C42865C96A1351B678459C /* Pods-SlidingNumberView_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SlidingNumberView_Tests-Info.plist"; sourceTree = "<group>"; };
-		16B076F35E912618C8E96AEEF4D32B6F /* Pods_SlidingNumberView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlidingNumberView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16B076F35E912618C8E96AEEF4D32B6F /* Pods_SlidingNumberView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SlidingNumberView_Tests.framework; path = "Pods-SlidingNumberView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F3359DF28F8CD63A8B3270C0917A538 /* Pods-SlidingNumberView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlidingNumberView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2404014E7C4475A1ACA23F38DD1F3955 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		33E7D2D6EDDBE29AC88E044772C69F46 /* SlidingNumberView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SlidingNumberView.modulemap; sourceTree = "<group>"; };
 		3935F2C4A26496F4C1FFF07C7E3B5D1F /* Pods-SlidingNumberView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlidingNumberView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		3B5DF4528927186B2B4C7B6579843FD7 /* SlidingNumberView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlidingNumberView-prefix.pch"; sourceTree = "<group>"; };
 		423E489CEBCA8F63DB9732632ACD504D /* Pods-SlidingNumberView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SlidingNumberView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		48647D66F098A676C162B0D543DC94D9 /* Pods-SlidingNumberView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SlidingNumberView_Example.modulemap"; sourceTree = "<group>"; };
-		4CEC11C64F0E0951CBA3FD5FD8A638A1 /* SlidingNumberView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SlidingNumberView.modulemap; sourceTree = "<group>"; };
-		4F0B4BE2B561CFDE90AAA444305E8CAA /* SlidingNumberView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlidingNumberView-umbrella.h"; sourceTree = "<group>"; };
+		490DACBEE22E8196B2A7D21A09C71178 /* SlidingNumberView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SlidingNumberView.xcconfig; sourceTree = "<group>"; };
 		56C020197FD136B45AC53C48D819E842 /* Pods-SlidingNumberView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlidingNumberView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		656FC9BEBE26566ABA87669E29552DB6 /* Pods-SlidingNumberView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SlidingNumberView_Example-dummy.m"; sourceTree = "<group>"; };
-		68F006FD941203355C53C1AD262A317F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		6B01B35763B2ABB93ED6742CDA386E3C /* SlidingNumberView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SlidingNumberView-Info.plist"; sourceTree = "<group>"; };
-		6C6746DAC84785174F843AF04E59BC94 /* SlidingNumberView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SlidingNumberView.xcconfig; sourceTree = "<group>"; };
 		7031CBF7F10E6A914E5670EBC2E7B8A1 /* Pods-SlidingNumberView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SlidingNumberView_Example-frameworks.sh"; sourceTree = "<group>"; };
+		8C71170F6AE7D2604F89D20EDD0FF93E /* SlidingNumberView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlidingNumberView-umbrella.h"; sourceTree = "<group>"; };
 		95CF6EC67B6ECA41E44B500482D42B3E /* Pods-SlidingNumberView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SlidingNumberView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9870337F6B713704DB9CA466CAE9AF15 /* Pods-SlidingNumberView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SlidingNumberView_Tests-dummy.m"; sourceTree = "<group>"; };
 		9940F65E1CD53F889DEBEF5B25A13801 /* Pods-SlidingNumberView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SlidingNumberView_Tests-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A1E0B2381FD3EDB79D4DB09AF614FDB2 /* SlidingNumberStrips.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlidingNumberStrips.swift; path = SlidingNumberView/Classes/SlidingNumberStrips.swift; sourceTree = "<group>"; };
+		9ADA41E6EF606761FAFD0C43C93C2542 /* SlidingNumberView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlidingNumberView.swift; path = SlidingNumberView/Classes/SlidingNumberView.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A9A892F4BE81734D7814C7FBBAE8FB41 /* Pods-SlidingNumberView_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SlidingNumberView_Example-Info.plist"; sourceTree = "<group>"; };
-		B24D781DE4BF7DB874AC173E67C73724 /* SlidingNumberView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SlidingNumberView-dummy.m"; sourceTree = "<group>"; };
 		C799A71716E60003E7C2EB469CDD5C32 /* Pods-SlidingNumberView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SlidingNumberView_Example-umbrella.h"; sourceTree = "<group>"; };
-		CA58DBC3A90B093E0A6FDC0B2E474441 /* Pods_SlidingNumberView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlidingNumberView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA58DBC3A90B093E0A6FDC0B2E474441 /* Pods_SlidingNumberView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SlidingNumberView_Example.framework; path = "Pods-SlidingNumberView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9EAA08B8B906FC776FCEDD0CB3A5F8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		CD2F758B990DE2B748258E17F51C9B28 /* SlidingNumberView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SlidingNumberView-dummy.m"; sourceTree = "<group>"; };
 		D610F13F84F81BED7620BA7E14E38248 /* Pods-SlidingNumberView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SlidingNumberView_Tests.modulemap"; sourceTree = "<group>"; };
-		D637B8EE3DF158936EC71E0D9A5D4C8D /* SlidingNumberView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SlidingNumberView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC50C5536DBD476A9A043DAC551EE1EA /* SlidingNumberView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlidingNumberView-prefix.pch"; sourceTree = "<group>"; };
-		E24D76CFED0F98F2598857DAD52D6E46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D637B8EE3DF158936EC71E0D9A5D4C8D /* SlidingNumberView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SlidingNumberView.framework; path = SlidingNumberView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79E667D3FE9E6D361BE154570BA6A32 /* SlidingNumberStrips.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlidingNumberStrips.swift; path = SlidingNumberView/Classes/SlidingNumberStrips.swift; sourceTree = "<group>"; };
+		DC60FA45058EBDFEEE840F6803BDF3FA /* SlidingNumberView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SlidingNumberView-Info.plist"; sourceTree = "<group>"; };
+		F3B383F242E378FDAD6CEA9226F30B08 /* SlidingNumberView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SlidingNumberView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F8BF46D72FE4DC4279889DA2202152FB /* Pods-SlidingNumberView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SlidingNumberView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		FB374731C1A6898B6F20F68D54CB27C5 /* SlidingNumberView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlidingNumberView.swift; path = SlidingNumberView/Classes/SlidingNumberView.swift; sourceTree = "<group>"; };
 		FCBF435919F094A585E45743AF3BAB03 /* Pods-SlidingNumberView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlidingNumberView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,23 +90,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FC97C18C20D08B64ECDC23385A3167C /* Frameworks */ = {
+		F348B883AEE4FA3ECCB7C22D93DD7B0F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6D3FBD0DB0196FEAE3C3D2EC08091CC /* Foundation.framework in Frameworks */,
+				69A993B5C5002D92DE3C1CB0B2C4E6F3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2DCFAE9F556B84C2649A1EF23FD7DA1B /* Development Pods */ = {
+		4A68D088D65007630E614275E1CB208C /* SlidingNumberView */ = {
 			isa = PBXGroup;
 			children = (
-				D6C9CD8BFD48A670D6AEEE2D39757D62 /* SlidingNumberView */,
+				D79E667D3FE9E6D361BE154570BA6A32 /* SlidingNumberStrips.swift */,
+				9ADA41E6EF606761FAFD0C43C93C2542 /* SlidingNumberView.swift */,
+				82AAC9CA69E48651B0F9CA6CA25A2937 /* Pod */,
+				A993C3EBBB5E2C46AA907A6B17E8D491 /* Support Files */,
 			);
-			name = "Development Pods";
+			name = SlidingNumberView;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		4DF33884C0DD93983FA6F2A97D07D175 /* Pods-SlidingNumberView_Example */ = {
@@ -151,25 +155,33 @@
 			path = "Target Support Files/Pods-SlidingNumberView_Tests";
 			sourceTree = "<group>";
 		};
-		7810A567254CEF1D96D35B878E26C26F /* Pod */ = {
+		699E435F222554DF11ACD3443B2D15D0 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				68F006FD941203355C53C1AD262A317F /* LICENSE */,
-				E24D76CFED0F98F2598857DAD52D6E46 /* README.md */,
-				093CC9B2E63C03103F52F553CAEE8567 /* SlidingNumberView.podspec */,
+				4A68D088D65007630E614275E1CB208C /* SlidingNumberView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		82AAC9CA69E48651B0F9CA6CA25A2937 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				CC9EAA08B8B906FC776FCEDD0CB3A5F8 /* LICENSE */,
+				2404014E7C4475A1ACA23F38DD1F3955 /* README.md */,
+				F3B383F242E378FDAD6CEA9226F30B08 /* SlidingNumberView.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		81D49071256E1313297CC2BE326DEB2D /* Support Files */ = {
+		A993C3EBBB5E2C46AA907A6B17E8D491 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4CEC11C64F0E0951CBA3FD5FD8A638A1 /* SlidingNumberView.modulemap */,
-				6C6746DAC84785174F843AF04E59BC94 /* SlidingNumberView.xcconfig */,
-				B24D781DE4BF7DB874AC173E67C73724 /* SlidingNumberView-dummy.m */,
-				6B01B35763B2ABB93ED6742CDA386E3C /* SlidingNumberView-Info.plist */,
-				DC50C5536DBD476A9A043DAC551EE1EA /* SlidingNumberView-prefix.pch */,
-				4F0B4BE2B561CFDE90AAA444305E8CAA /* SlidingNumberView-umbrella.h */,
+				33E7D2D6EDDBE29AC88E044772C69F46 /* SlidingNumberView.modulemap */,
+				490DACBEE22E8196B2A7D21A09C71178 /* SlidingNumberView.xcconfig */,
+				CD2F758B990DE2B748258E17F51C9B28 /* SlidingNumberView-dummy.m */,
+				DC60FA45058EBDFEEE840F6803BDF3FA /* SlidingNumberView-Info.plist */,
+				3B5DF4528927186B2B4C7B6579843FD7 /* SlidingNumberView-prefix.pch */,
+				8C71170F6AE7D2604F89D20EDD0FF93E /* SlidingNumberView-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/SlidingNumberView";
@@ -197,7 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				2DCFAE9F556B84C2649A1EF23FD7DA1B /* Development Pods */,
+				699E435F222554DF11ACD3443B2D15D0 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				CCD11F48670AF17D7D05E975B8B376B8 /* Products */,
 				59C3838335C6EAF14F7581CC4A5B309B /* Targets Support Files */,
@@ -212,18 +224,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D6C9CD8BFD48A670D6AEEE2D39757D62 /* SlidingNumberView */ = {
-			isa = PBXGroup;
-			children = (
-				FB374731C1A6898B6F20F68D54CB27C5 /* SlidingNumberView.swift */,
-				A1E0B2381FD3EDB79D4DB09AF614FDB2 /* SlidingNumberStrips.swift */,
-				7810A567254CEF1D96D35B878E26C26F /* Pod */,
-				81D49071256E1313297CC2BE326DEB2D /* Support Files */,
-			);
-			name = SlidingNumberView;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -235,11 +235,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74092482DD2820A44490934DA90476A7 /* Headers */ = {
+		663429A0A605E83903677291EF35B95E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91BF9510B26F9E0DDD14DA409C4F203D /* SlidingNumberView-umbrella.h in Headers */,
+				39B9FF3228B1328468B5639F44D07E7F /* SlidingNumberView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,12 +294,12 @@
 		};
 		FB1908B2256E5D37BAB1AC7AB224D1EA /* SlidingNumberView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B81E76543C3784B37DDF77EFF84509E /* Build configuration list for PBXNativeTarget "SlidingNumberView" */;
+			buildConfigurationList = 3CFA059451828322FF3FE97A133C9F3B /* Build configuration list for PBXNativeTarget "SlidingNumberView" */;
 			buildPhases = (
-				74092482DD2820A44490934DA90476A7 /* Headers */,
-				73205BA19B029248F15B4EC1AC0F3E32 /* Sources */,
-				8FC97C18C20D08B64ECDC23385A3167C /* Frameworks */,
-				C2B6164B5D48175EFC26F9FFBE140F81 /* Resources */,
+				663429A0A605E83903677291EF35B95E /* Headers */,
+				6CDA14B94FFDF4477C9A73CF0020E6A5 /* Sources */,
+				F348B883AEE4FA3ECCB7C22D93DD7B0F /* Frameworks */,
+				0FE5D99E3E9B285D64F8C0821D5A6C8F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -346,14 +346,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8925233EEAA0F6818F98827CCFFCF43F /* Resources */ = {
+		0FE5D99E3E9B285D64F8C0821D5A6C8F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2B6164B5D48175EFC26F9FFBE140F81 /* Resources */ = {
+		8925233EEAA0F6818F98827CCFFCF43F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,13 +379,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		73205BA19B029248F15B4EC1AC0F3E32 /* Sources */ = {
+		6CDA14B94FFDF4477C9A73CF0020E6A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B5DA69D0BFD8C75BEEF0371B3CA8985 /* SlidingNumberStrips.swift in Sources */,
-				6B6B97E4A9D8BC3359FC34514F8F1D2D /* SlidingNumberView-dummy.m in Sources */,
-				2AEE90E662410D4AC6944F8EFAD6A6AD /* SlidingNumberView.swift in Sources */,
+				91DEAC1A57A8E7EE3902117059993DFF /* SlidingNumberStrips.swift in Sources */,
+				F48ECBDAED9744A3185F24A8CDA363DF /* SlidingNumberView-dummy.m in Sources */,
+				E6C733C5D84E49511F370276BAC972BD /* SlidingNumberView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,9 +507,9 @@
 			};
 			name = Debug;
 		};
-		2F3FC1D3F4DEC5DF349728439E129675 /* Release */ = {
+		453096BD1701FE67BF1CD8C57F582AAD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C6746DAC84785174F843AF04E59BC94 /* SlidingNumberView.xcconfig */;
+			baseConfigurationReference = 490DACBEE22E8196B2A7D21A09C71178 /* SlidingNumberView.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -533,46 +533,13 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		48C170EE66065B58F4876F034974E21D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C6746DAC84785174F843AF04E59BC94 /* SlidingNumberView.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SlidingNumberView/SlidingNumberView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SlidingNumberView/SlidingNumberView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SlidingNumberView/SlidingNumberView.modulemap";
-				PRODUCT_MODULE_NAME = SlidingNumberView;
-				PRODUCT_NAME = SlidingNumberView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		9FFA5B797B3745A069D5FE2DA88EC35B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -680,6 +647,39 @@
 			};
 			name = Debug;
 		};
+		F0139C42F8FC935DC784827803F4CA70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 490DACBEE22E8196B2A7D21A09C71178 /* SlidingNumberView.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SlidingNumberView/SlidingNumberView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SlidingNumberView/SlidingNumberView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SlidingNumberView/SlidingNumberView.modulemap";
+				PRODUCT_MODULE_NAME = SlidingNumberView;
+				PRODUCT_NAME = SlidingNumberView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		F090CD07A80273D5A73C8EA19224ADDB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -733,7 +733,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -742,6 +743,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3CFA059451828322FF3FE97A133C9F3B /* Build configuration list for PBXNativeTarget "SlidingNumberView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0139C42F8FC935DC784827803F4CA70 /* Debug */,
+				453096BD1701FE67BF1CD8C57F582AAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -756,15 +766,6 @@
 			buildConfigurations = (
 				DE3BE185679A4DCD47FEAC41181C2C35 /* Debug */,
 				9FFA5B797B3745A069D5FE2DA88EC35B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8B81E76543C3784B37DDF77EFF84509E /* Build configuration list for PBXNativeTarget "SlidingNumberView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				48C170EE66065B58F4876F034974E21D /* Debug */,
-				2F3FC1D3F4DEC5DF349728439E129675 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
