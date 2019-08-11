@@ -32,13 +32,22 @@
                                     <action selector="clickOnStartCounting:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9fh-6S-NTJ"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="FXB-Pz-gQb" customClass="SlidingNumberView" customModule="SlidingNumberView">
+                                <rect key="frame" x="67.5" y="314" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="J86-JR-2f9" firstAttribute="top" secondItem="FXB-Pz-gQb" secondAttribute="bottom" constant="100" id="BHb-xK-XcP"/>
                             <constraint firstItem="J86-JR-2f9" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="IOq-4R-GQ8"/>
+                            <constraint firstItem="FXB-Pz-gQb" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="NfK-CU-3Nz"/>
                             <constraint firstItem="J86-JR-2f9" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" multiplier="1.7" id="sRH-Bt-abG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="outletNumberView" destination="FXB-Pz-gQb" id="mGr-de-IJM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

@@ -20,29 +20,65 @@ public enum SlidingAcceleration {
 
 public class SlidingNumberView: UIView {
     
-    var fromNumber: String!
-    var toNumber: String!
-    var counterFont: UIFont!
+    private var fromNumber: String! = "0000"
+    private var toNumber: String! = "0000"
+    private var counterFont: UIFont!
 
+    /// The start number of the sliding animation. MUST be in String with the same digits as the endNumber
     public var startNumber: String! {
         didSet {
             self.fromNumber = startNumber
+            if fromNumber.count != toNumber.count {
+                if (fromNumber.count > toNumber.count) {
+                    var zeroString = ""
+                    for _ in 0..<abs(fromNumber.count - toNumber.count) {
+                        zeroString += "0"
+                    }
+                    toNumber += zeroString
+                } else {
+                    toNumber = String(toNumber.prefix(fromNumber.count))
+                }
+            }
             cleanAndSetup()
         }
     }
     
+    /// The end number of the sliding animation. MUST be in String with the same digits as the startNumber
     public var endNumber: String! {
         didSet {
             self.toNumber = endNumber
+            if toNumber.count != fromNumber.count {
+                if (toNumber.count > fromNumber.count) {
+                    var zeroString = ""
+                    for _ in 0..<abs(fromNumber.count - toNumber.count) {
+                        zeroString += "0"
+                    }
+                    fromNumber += zeroString
+                } else {
+                    fromNumber = String(fromNumber.prefix(toNumber.count))
+                }
+            }
             cleanAndSetup()
         }
     }
     
+    /// The font used to initialize the labels for counting. (It currently supports system font of any size)
+    public var font: UIFont! {
+        didSet {
+            self.counterFont = font
+            cleanAndSetup()
+            self.layoutIfNeeded()
+        }
+    }
+    
+    /// The direction in which the left-most or right-most digit will slide the fastest
     public var accelerationDirection: SlidingAcceleration = .leftToRight {
         didSet {
             cleanAndSetup()
         }
     }
+    
+    /// The total duration of the animation that will slide for the counting animation
     public var animationDuration: Double = 3
     private var slideUp: Bool! = true {
         didSet {
@@ -50,7 +86,7 @@ public class SlidingNumberView: UIView {
         }
     }
     
-    func cleanAndSetup() {
+    private func cleanAndSetup() {
         for strip in labelStrips {
             for subview in strip.subviews {
                 subview.removeFromSuperview()
@@ -62,6 +98,8 @@ public class SlidingNumberView: UIView {
 
     private var labelStrips: [SlidingNumberStrips]!
     private var labelStripsTopConstraints: [NSLayoutConstraint]!
+    private var widthConstraint: NSLayoutConstraint!
+    private var heightConstraint: NSLayoutConstraint!
     
     /// These values are used to simulate realistic scrolling effect on numbers
     private var displacementValues = [[0],
@@ -80,23 +118,18 @@ public class SlidingNumberView: UIView {
          endNumber: String,
          font: UIFont? = UIFont.systemFont(ofSize: 36)) {
         let digitCount = startNumber.count
-
         super.init(frame: CGRect(x: 0, y: 0, width: font!.pointSize * CGFloat(digitCount), height: font!.pointSize))
-
-        self.backgroundColor = UIColor.clear
+        
         self.layer.masksToBounds = true
         self.fromNumber = startNumber
         self.toNumber = endNumber
         self.counterFont = font
         
         initializeStackViews()
-        self.widthAnchor.constraint(equalToConstant: frame.width).isActive = true
-        self.heightAnchor.constraint(equalToConstant: frame.height).isActive = true
         self.layoutIfNeeded()
     }
     
-    func initializeStackViews() {
-        
+    private func initializeStackViews() {
         let digitCount = toNumber.count
         
         var fromChar = [Character]()
@@ -158,9 +191,23 @@ public class SlidingNumberView: UIView {
             labelStripsTopConstraints.append(topConstraint)
             index += 1
         }
+        
+        let width = counterFont!.pointSize * CGFloat(digitCount)
+        let height = counterFont!.pointSize
+        
+        if let _ = widthConstraint, let _ = heightConstraint {
+            widthConstraint.constant = width
+            heightConstraint.constant = height
+        } else {
+            widthConstraint = NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: width)
+            heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: height)
+            self.addConstraints([widthConstraint, heightConstraint])
+        }
+        
+        
     }
     
-    func updateSlideDirection() {
+    private func updateSlideDirection() {
         let tempNum = self.fromNumber
         self.fromNumber = self.toNumber
         self.toNumber = tempNum
@@ -180,8 +227,8 @@ public class SlidingNumberView: UIView {
         }
     }
     
+    /// Starts the counting with sliding animation with a completion handler
     public func startCounting(completion:@escaping (Bool) -> ()) {
-        
         var finishCount = 0
         for index in 0..<labelStrips.count {
             let tempDuration = animationDuration - 0.2 * Double(index)
@@ -190,12 +237,14 @@ public class SlidingNumberView: UIView {
             } else {
                 self.labelStripsTopConstraints[index].constant = 0
             }
-            UIView.animate(withDuration: tempDuration, delay: 0, options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: tempDuration, delay: 0, options: [], animations: {
                 self.layoutIfNeeded()
             }, completion: {finish in
                 finishCount += 1
                 if (finishCount == self.labelStrips.count - 1) {
-                    self.startNumber = self.toNumber
+                    
+                    self.fromNumber = self.toNumber
+                    self.cleanAndSetup()
                     self.layoutIfNeeded()
                     completion(true)
                 }
@@ -205,6 +254,10 @@ public class SlidingNumberView: UIView {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        self.layer.masksToBounds = true
+        self.counterFont = UIFont.systemFont(ofSize: 36)
+        initializeStackViews()
+        self.layoutIfNeeded()
     }
 }
