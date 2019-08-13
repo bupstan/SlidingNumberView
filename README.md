@@ -106,7 +106,7 @@ numberView.startCounting(completion: {finish in
 
 ## Known Limitations
 - SlidingNumberView is in alpha state.
-- SlidingNumberView can only be initialized programmatically like the usage above.
+- ~~SlidingNumberView can only be initialized programmatically like the usage above.~~ Can now be set as a custom class for `UIView` in storyboard.
 - Only support system font of various sizes with a regular weight only.
 - Only numbers of the same digits can be animated
 	- (1234 to 4567) ✔️
@@ -115,8 +115,8 @@ numberView.startCounting(completion: {finish in
 
 ## To be implemented
 - [ ] Multiple font weights
-- [ ] Support for animating through different digit numbers
-- [ ] Support for initializing through storyboard objects and IBOutlets
+- [x] Support for animating through different digit numbers (Partially Done)
+- [x] Support for initializing through storyboard objects and IBOutlets
 
 ## Author
 

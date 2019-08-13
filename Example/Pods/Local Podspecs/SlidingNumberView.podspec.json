@@ -1,6 +1,6 @@
 {
   "name": "SlidingNumberView",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "summary": "SlidingNumberView is a custom view that will count from an initial number to a final number with sliding animation",
   "description": "SlidingNumberView enables numbers to change like the hand tally counter (most relevant example). It changes from a starting number to a final number with sliding animation. Currently, it supports numbers up to 11 Digits",
   "homepage": "https://github.com/bupstan/SlidingNumberView",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/bupstan/SlidingNumberView.git",
-    "tag": "0.0.2"
+    "tag": "0.0.3"
   },
   "platforms": {
     "ios": "12.0"
