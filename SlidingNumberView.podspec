@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SlidingNumberView'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'SlidingNumberView is a custom view that will count from an initial number to a final number with sliding animation'
 
 # This description is used to generate tags and improve search results.
@@ -26,8 +26,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/bupstan/SlidingNumberView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '12.0'
-  s.swift_version = '5.0'
+  s.ios.deployment_target = '10.0'
+  s.swift_version = '4.2'
   s.source_files = 'SlidingNumberView/Classes/**/*'
   
   # s.resource_bundles = {

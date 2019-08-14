@@ -1,5 +1,5 @@
 PODS:
-  - SlidingNumberView (0.0.3)
+  - SlidingNumberView (0.0.4)
 
 DEPENDENCIES:
   - SlidingNumberView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SlidingNumberView: fc54c40d87f74022491235dc955f07c1d1ef91c2
+  SlidingNumberView: 732e134d3d3d66d520e23a5d7dd8adf23be6b403
 
 PODFILE CHECKSUM: d2596f909db0a372bbcffe59d0c6ad248f78bc42
 
