@@ -13,8 +13,8 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
-- iOS 12.0
-- Swift 5.0
+- iOS 10.0+
+- Swift 4.2+
 
 ## Installation
 
@@ -103,19 +103,29 @@ numberView.startCounting(completion: {finish in
 })
 ```
 
+## Accessible Properties
+```swift
+/// Spacing of the Digits
+numberView.digitSpacing = 10
+
+/// Digit Font
+numberView.font = .systemFont(ofSize: 42)
+
+/// The whole animation duration
+numberView.animationDuration = 3
+
+/// Boolean. Is it still counting?
+numberView.inProgress
+```
 
 ## Known Limitations
 - SlidingNumberView is in alpha state.
-- ~~SlidingNumberView can only be initialized programmatically like the usage above.~~ Can now be set as a custom class for `UIView` in storyboard.
-- Only support system font of various sizes with a regular weight only.
-- Only numbers of the same digits can be animated
-	- (1234 to 4567) ✔️
-	- (123 to 4567) ✖️
-	- (0123 to 4567) ✔️
+- ~~SlidingNumberView can only be initialized programmatically like the usage above.~~ (Can now be set as a custom class for `UIView` in storyboard.)
+- ~~Only numbers of the same digits can be animated~~ (Increasing-digits will smoothly animate through its change, Decreasing ones are snappy)
 
 ## To be implemented
-- [ ] Multiple font weights
-- [x] Support for animating through different digit numbers (Partially Done)
+- [x] Multiple font weights
+- [x] Support for animating through different digit numbers
 - [x] Support for initializing through storyboard objects and IBOutlets
 
 ## Author

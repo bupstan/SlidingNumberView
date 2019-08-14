@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SlidingNumberView'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = 'SlidingNumberView is a custom view that will count from an initial number to a final number with sliding animation'
 
 # This description is used to generate tags and improve search results.

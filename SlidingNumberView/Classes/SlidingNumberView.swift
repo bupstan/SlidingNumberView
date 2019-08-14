@@ -24,6 +24,11 @@ public class SlidingNumberView: UIView {
     private var toNumber: String! = "0000"
     private var counterFont: UIFont!
 
+    private var counting = false
+    public var inProgress: Bool {
+        return counting
+    }
+
     /// The start number of the sliding animation. MUST be in String with the same digits as the endNumber
     public var startNumber: String! {
         didSet {
@@ -71,6 +76,14 @@ public class SlidingNumberView: UIView {
         }
     }
     
+    /// The spacing points between digits. Default is 0.
+    public var digitSpacing: CGFloat = 0 {
+        didSet {
+            cleanAndSetup()
+            self.layoutIfNeeded()
+        }
+    }
+    
     /// The direction in which the left-most or right-most digit will slide the fastest
     public var accelerationDirection: SlidingAcceleration = .leftToRight {
         didSet {
@@ -100,6 +113,8 @@ public class SlidingNumberView: UIView {
     private var labelStripsTopConstraints: [NSLayoutConstraint]!
     private var widthConstraint: NSLayoutConstraint!
     private var heightConstraint: NSLayoutConstraint!
+    private var widthValue: CGFloat!
+    private var heightValue: CGFloat!
     
     /// These values are used to simulate realistic scrolling effect on numbers
     private var displacementValues = [[0],
@@ -172,18 +187,17 @@ public class SlidingNumberView: UIView {
             }
             self.addSubview(labelStackView)
             labelStackView.translatesAutoresizingMaskIntoConstraints = false
-            labelStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: counterFont!.pointSize * CGFloat(index)).isActive = true
             
             self.layoutIfNeeded()   // have to call this to obtain the height of the label
             let topConstraint = NSLayoutConstraint(item: labelStackView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0)
-            let height = labelStackView.subviews[0].frame.height
-            labelStackView.labelHeight = height
-            
+            labelStackView.labelSize = labelStackView.subviews[0].frame.size
+            labelStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: "0".widthOfString(usingFont: counterFont) * CGFloat(index) + digitSpacing * CGFloat(index)).isActive = true
+
             if slideUp {
                 topConstraint.constant = 0
             } else {
                 let count = labelStackView.subviews.count
-                topConstraint.constant = -height * CGFloat(count - 1)
+                topConstraint.constant = -labelStackView.labelSize!.height * CGFloat(count - 1)
             }
             self.addConstraint(topConstraint)
             
@@ -192,19 +206,28 @@ public class SlidingNumberView: UIView {
             index += 1
         }
         
-        let width = counterFont!.pointSize * CGFloat(digitCount)
-        let height = counterFont!.pointSize
+        var width: CGFloat
+        var height:CGFloat
+        
+        if (labelStrips.count == 1) {
+            width = "0".widthOfString(usingFont: counterFont)
+            height = getLargestLabelStripHeight()
+        } else {
+            width = getLargestLabelStripWidth() * CGFloat(digitCount) + digitSpacing * (CGFloat(digitCount) - 1)
+            height = getLargestLabelStripHeight()
+        }
+        
         
         if let _ = widthConstraint, let _ = heightConstraint {
-            widthConstraint.constant = width
-            heightConstraint.constant = height
+            widthValue = width
+            heightValue = height
         } else {
+            widthValue = width
+            heightValue = height
             widthConstraint = NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: width)
             heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: height)
             self.addConstraints([widthConstraint, heightConstraint])
         }
-        
-        
     }
     
     private func updateSlideDirection() {
@@ -221,7 +244,7 @@ public class SlidingNumberView: UIView {
         } else {
             var index = 0
             for constraint in labelStripsTopConstraints {
-                constraint.constant = -labelStrips[index].labelHeight * CGFloat(labelStrips[index].subviews.count - 1)
+                constraint.constant = -labelStrips[index].labelSize.height * CGFloat(labelStrips[index].subviews.count - 1)
                 index += 1
             }
         }
@@ -229,11 +252,15 @@ public class SlidingNumberView: UIView {
     
     /// Starts the counting with sliding animation with a completion handler
     public func startCounting(completion:@escaping (Bool) -> ()) {
+        counting = true
+        widthConstraint.constant = widthValue
+        heightConstraint.constant = heightValue
+       
         var finishCount = 0
         for index in 0..<labelStrips.count {
             let tempDuration = animationDuration - 0.2 * Double(index)
             if self.slideUp {
-                self.labelStripsTopConstraints[index].constant = -self.labelStrips[index].labelHeight * CGFloat(self.labelStrips[index].subviews.count - 1)
+                self.labelStripsTopConstraints[index].constant = -self.labelStrips[index].labelSize.height * CGFloat(self.labelStrips[index].subviews.count - 1)
             } else {
                 self.labelStripsTopConstraints[index].constant = 0
             }
@@ -241,16 +268,32 @@ public class SlidingNumberView: UIView {
                 self.layoutIfNeeded()
             }, completion: {finish in
                 finishCount += 1
-                if (finishCount == self.labelStrips.count - 1) {
-                    
+                if (finishCount == self.labelStrips.count) {
                     self.fromNumber = self.toNumber
                     self.cleanAndSetup()
                     self.layoutIfNeeded()
+                    self.counting = false
                     completion(true)
                 }
                 // FIXME: Optimize multiple stack views and multiple labels here
             })
         }
+    }
+    
+    func getLargestLabelStripWidth() -> CGFloat {
+        var result:CGFloat = 0
+        for view in labelStrips {
+            result = view.labelSize.width > result ? view.labelSize.width : result
+        }
+        return "0".widthOfString(usingFont: counterFont)
+    }
+    
+    func getLargestLabelStripHeight() -> CGFloat {
+        var result:CGFloat = 0
+        for view in labelStrips {
+            result = view.labelSize.height > result ? view.labelSize.height : result
+        }
+        return result
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -259,5 +302,13 @@ public class SlidingNumberView: UIView {
         self.counterFont = UIFont.systemFont(ofSize: 36)
         initializeStackViews()
         self.layoutIfNeeded()
+    }
+}
+
+extension String {
+    func widthOfString(usingFont font: UIFont) -> CGFloat {
+        let fontAttributes = [NSAttributedString.Key.font: font]
+        let size = self.size(withAttributes: fontAttributes)
+        return size.width
     }
 }

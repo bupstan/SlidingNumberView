@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,20 +34,57 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="FXB-Pz-gQb" customClass="SlidingNumberView" customModule="SlidingNumberView">
-                                <rect key="frame" x="67.5" y="314" width="240" height="128"/>
+                                <rect key="frame" x="67.5" y="269.5" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bof-8d-Ubq">
+                                <rect key="frame" x="282.5" y="542" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="BOi-ej-mmc"/>
+                                    <constraint firstAttribute="height" constant="50" id="pbA-Ie-LcV"/>
+                                </constraints>
+                                <state key="normal" title="+ 1000"/>
+                                <connections>
+                                    <action selector="add:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yVb-eO-EUf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esU-nu-0PB">
+                                <rect key="frame" x="42.5" y="542" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Za7-8F-b7k"/>
+                                    <constraint firstAttribute="width" constant="50" id="hIu-ho-pNf"/>
+                                </constraints>
+                                <state key="normal" title="- 1000"/>
+                                <connections>
+                                    <action selector="subtract:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yTD-71-zbS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Value - 2000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5u-Y0-Y0c">
+                                <rect key="frame" x="111.5" y="166" width="152.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="J86-JR-2f9" firstAttribute="top" secondItem="FXB-Pz-gQb" secondAttribute="bottom" constant="100" id="BHb-xK-XcP"/>
                             <constraint firstItem="J86-JR-2f9" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="IOq-4R-GQ8"/>
+                            <constraint firstItem="J86-JR-2f9" firstAttribute="leading" secondItem="esU-nu-0PB" secondAttribute="trailing" constant="20" id="LWF-jf-ayi"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X5u-Y0-Y0c" secondAttribute="trailing" constant="10" id="NOT-aC-Alq"/>
                             <constraint firstItem="FXB-Pz-gQb" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="NfK-CU-3Nz"/>
+                            <constraint firstItem="FXB-Pz-gQb" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="R12-0v-73k"/>
+                            <constraint firstItem="Bof-8d-Ubq" firstAttribute="top" secondItem="J86-JR-2f9" secondAttribute="bottom" constant="-50" id="TFD-7x-m5s"/>
+                            <constraint firstItem="X5u-Y0-Y0c" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="WZX-xB-3Ob"/>
+                            <constraint firstItem="X5u-Y0-Y0c" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="146" id="aKC-Tv-Awa"/>
+                            <constraint firstItem="X5u-Y0-Y0c" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="aOG-oh-vpZ"/>
+                            <constraint firstItem="Bof-8d-Ubq" firstAttribute="leading" secondItem="J86-JR-2f9" secondAttribute="trailing" constant="20" id="hIM-Kg-ef9"/>
+                            <constraint firstItem="esU-nu-0PB" firstAttribute="bottom" secondItem="J86-JR-2f9" secondAttribute="bottom" id="hbt-IC-xsQ"/>
                             <constraint firstItem="J86-JR-2f9" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" multiplier="1.7" id="sRH-Bt-abG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="outletNumberView" destination="FXB-Pz-gQb" id="mGr-de-IJM"/>
+                        <outlet property="targetValue" destination="X5u-Y0-Y0c" id="Cfu-Nd-dNd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
