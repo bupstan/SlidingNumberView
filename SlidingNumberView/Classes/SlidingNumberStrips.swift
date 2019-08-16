@@ -42,7 +42,7 @@ public class SlidingNumberStrips: UIStackView {
         axis = .vertical
         distribution = .equalSpacing
         spacing = 0
-        alignment = .leading
+        alignment = .center
     }
     
     required init(coder: NSCoder) {
@@ -57,6 +57,7 @@ public class SlidingNumberStrips: UIStackView {
                 let tempLabel = UILabel(frame: .zero)
                 tempLabel.font = labelFont
                 tempLabel.text = "\(tempNo)"
+                tempLabel.textAlignment = .center
                 self.addArrangedSubview(tempLabel)
                 
                 if goingUp {

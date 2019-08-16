@@ -23,8 +23,11 @@ public class SlidingNumberView: UIView {
     private var fromNumber: String! = "0000"
     private var toNumber: String! = "0000"
     private var counterFont: UIFont!
+    
+    private var isShrinking: Bool = false
+    private var shrinkingTarget: Int = 0
 
-    private var counting = false
+    private var counting: Bool = false
     public var inProgress: Bool {
         return counting
     }
@@ -60,7 +63,8 @@ public class SlidingNumberView: UIView {
                     }
                     fromNumber += zeroString
                 } else {
-                    fromNumber = String(fromNumber.prefix(toNumber.count))
+                    isShrinking = true
+                    shrinkingTarget = toNumber.count
                 }
             }
             cleanAndSetup()
@@ -93,6 +97,7 @@ public class SlidingNumberView: UIView {
     
     /// The total duration of the animation that will slide for the counting animation
     public var animationDuration: Double = 3
+    
     private var slideUp: Bool! = true {
         didSet {
             updateSlideDirection()
@@ -166,10 +171,11 @@ public class SlidingNumberView: UIView {
             var displacement = [Int]()
             
             if accelerationDirection == .leftToRight {
-                displacement = displacementValues[digitCount - 1]
+                displacement = isShrinking ? displacementValues[shrinkingTarget - 1] : displacementValues[digitCount - 1]
             } else if accelerationDirection == .rightToLeft {
-                displacement = displacementValues[digitCount - 1].reversed()
+                displacement = isShrinking ? displacementValues[shrinkingTarget - 1].reversed() : displacementValues[digitCount - 1].reversed()
             }
+//            print(isShrinking)
             
             if displacement[index] == 0 {
                 charCount = CGFloat(abs(fromChar[index].wholeNumberValue! - toChar[index].wholeNumberValue!)) + 1
@@ -190,8 +196,10 @@ public class SlidingNumberView: UIView {
             
             self.layoutIfNeeded()   // have to call this to obtain the height of the label
             let topConstraint = NSLayoutConstraint(item: labelStackView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 0)
+            
             labelStackView.labelSize = labelStackView.subviews[0].frame.size
             labelStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: "0".widthOfString(usingFont: counterFont) * CGFloat(index) + digitSpacing * CGFloat(index)).isActive = true
+            labelStackView.widthAnchor.constraint(equalToConstant: getLargestLabelStripWidth()).isActive = true
 
             if slideUp {
                 topConstraint.constant = 0
@@ -213,7 +221,11 @@ public class SlidingNumberView: UIView {
             width = "0".widthOfString(usingFont: counterFont)
             height = getLargestLabelStripHeight()
         } else {
-            width = getLargestLabelStripWidth() * CGFloat(digitCount) + digitSpacing * (CGFloat(digitCount) - 1)
+            if isShrinking {
+                width = getLargestLabelStripWidth() * CGFloat(shrinkingTarget) + digitSpacing * (CGFloat(shrinkingTarget) - 1)
+            } else {
+                width = getLargestLabelStripWidth() * CGFloat(digitCount) + digitSpacing * (CGFloat(digitCount) - 1)
+            }
             height = getLargestLabelStripHeight()
         }
         
@@ -275,20 +287,16 @@ public class SlidingNumberView: UIView {
                     self.counting = false
                     completion(true)
                 }
-                // FIXME: Optimize multiple stack views and multiple labels here
+                // FIXME: Optimize stack views and labels here
             })
         }
     }
     
-    func getLargestLabelStripWidth() -> CGFloat {
-        var result:CGFloat = 0
-        for view in labelStrips {
-            result = view.labelSize.width > result ? view.labelSize.width : result
-        }
+    private func getLargestLabelStripWidth() -> CGFloat {
         return "0".widthOfString(usingFont: counterFont)
     }
     
-    func getLargestLabelStripHeight() -> CGFloat {
+    private func getLargestLabelStripHeight() -> CGFloat {
         var result:CGFloat = 0
         for view in labelStrips {
             result = view.labelSize.height > result ? view.labelSize.height : result

@@ -26,14 +26,17 @@ class ViewController: UIViewController {
     
     @IBAction func add(_ sender: Any) {
         number += 1000
-        outletNumberView.endNumber = "\(number)"
         targetValue.text = "Target Value - \(number)"
-
+        if (!outletNumberView.inProgress) {
+            outletNumberView.endNumber = "\(number)"
+        }
     }
     @IBAction func subtract(_ sender: Any) {
         number -= 1000
-        outletNumberView.endNumber = "\(number)"
         targetValue.text = "Target Value - \(number)"
+        if (!outletNumberView.inProgress) {
+            outletNumberView.endNumber = "\(number)"
+        }
     }
     
     override func viewDidLoad() {
@@ -41,21 +44,15 @@ class ViewController: UIViewController {
         outletNumberView.font = .systemFont(ofSize: 42)
         outletNumberView.startNumber = "0"
         outletNumberView.endNumber = "\(number)"
-        outletNumberView.digitSpacing = 10
+        outletNumberView.digitSpacing = 0
         targetValue.text = "Target Value - \(number)"
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
-
-    func getSize(){
-
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
-
-
